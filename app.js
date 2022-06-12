@@ -27,7 +27,22 @@ io.sockets.on('connection', (socket) => {
 		const uid = roomData.uid;
 		const rid = roomData.rid;
 		const rsa = roomData.rsa;
-		//
+		
+		let sql = 'SELECT * FROM Room WHERE ROOM_NAME = ?';
+		let arr = [rid, uid, rsa];
+		let [user, fields] = await db.sql_get_val(sql, rid);
+		if (user.length == 0) {
+			sql = 'INSERT INTO Room(ROOM_NAME, UID) VALUES(?, ?)';
+			db.sql_ins(sql, arr.slice(0, 2));
+		}
+		sql = 'SELECT * FROM Participant WHERE ROOM_NAME = ? AND UID = ?';
+		[user, fields] = await db.sql_get_val(sql, arr.slice(0, 2));
+		if (user.length == 0) {
+			sql = 'INSERT INTO Participant(ROOM_NAME, UID, RSA) VALUES(?, ?, ?)';
+                        db.sql_int(sql, arr);
+		} else {
+			console.log(`${uid}님은 이미 ${rid}에 참가 중입니다.`);
+		}
 		
 		const enterData = {
 			type: 'ENTER',
@@ -42,7 +57,19 @@ io.sockets.on('connection', (socket) => {
 		const roomData = JSON.parse(data);
 		const uid = roomData.uid;
 		const rid = roomData.rid;
-		//
+		
+		let sql = 'DELETE FROM Participant WHERE ROOM_NAME = ? AND UID = ?';
+		let arr = [rid, uid];
+		await db.sql_ins(sql, arr);
+
+		sql = 'SELECT * FROM Participant WHERE ROOM_NAME = ? AND UID = ?';
+		let [user, fields] = await db.sql_get_val(sql, arr);
+		if (user.length == 0) {
+			sql = 'DELETE FROM Room WHERE ROOM_NAME = ? AND UID = ?';
+			db.sql_ins(sql, arr);
+			sql = 'DELETE FROM Chatting WHERE ROOM_NAME = ?';
+			db.sql_ins(sql, rid);
+		}
 
 		const leaveData = {
 			type: 'LEAVE',
@@ -59,7 +86,10 @@ io.sockets.on('connection', (socket) => {
 		const msg = roomData.msg;
 		const time = new Date();
 		const IV = roomData.iv;
-		//
+		
+		const sql = 'INSERT INTO Chatting(ROOM_NAME, UID, MESSAGE, TIME, IV) VALUES(?, ?, ?, ?, ?)';
+		const arr = [rid, uid, msg, time, IV];
+		db.sql_ins(sql, arr);
 
 		const msgData = {
 			type: 'msg',

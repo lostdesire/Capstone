@@ -3,7 +3,7 @@ const jwt = require('./jwt.js');
 const bcrypt = require('bcrypt');
 
 module.exports = {
-        signing: async (req, res) => {
+        signin: async (req, res) => {
                 console.log('-signin-');
                 const {id, password, name, msg, img} = req.body;
                 let sql = 'SELECT * FROM User WHERE USER_ID = ?';
