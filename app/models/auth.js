@@ -38,7 +38,7 @@ module.exports = {
                                         msg: '로그인 성공',
                                         token: jwtToken.token
                                 });
-                                console.log('로그인 성공');
+                                console.log(`${id} 로그인 성공`);
                         } else {
                                 res.status(400).json({msg: '로그인 실패'});
                                 console.log('로그인 실패');
