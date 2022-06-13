@@ -11,28 +11,38 @@ const pool = mysql.createPool({
 
 class db{
         async sql_get(sql){
-                const conn = await pool.getConnection(async conn => conn);
-                try{
-                        const rows = await conn.query(sql);
-                        return rows;
-                } catch (err) {
-                        console.log(`\t[DB.js]: Error in exec_sql_get()\n${err}`);
-                        return null;
-                } finally {
-                        conn.release();
-                }
+		try {
+	                const conn = await pool.getConnection(async conn => conn);
+	                try{
+	                        const rows = await conn.query(sql);
+	                        return rows;
+	                } catch (err) {
+	                        console.log(`\t[DB.js]: Error in sql_get()\n${err}`);
+	                        return null;
+	                } finally {
+	                        conn.release();
+	                }
+		} catch (err) {
+			console.log('DB Error');
+			return null;
+		}
         }
         async sql_get_val(sql, values){
-                const conn = await pool.getConnection(async conn => conn);
-                try{
-                        const rows = await conn.query(sql, values);
-                        return rows;
-                } catch (err) {
-                        console.log(`\t[DB.js]: Error in exec_sql_get()\n${err}`);
-                        return null;
-                } finally {
-                        conn.release();
-                }
+		try {
+	                const conn = await pool.getConnection(async conn => conn);
+                	try {
+                 	       const rows = await conn.query(sql, values);
+                 	       return rows;
+                	} catch (err) {
+                	        console.log(`\t[DB.js]: Error in sql_get_val()\n${err}`);
+                	        return null;
+                	} finally {
+                	        conn.release();
+                	}
+		} catch (err) {
+			console.log('DB Error');
+			return null;
+		}
         }
         async sql_ins(sql, values){
                 var conn;

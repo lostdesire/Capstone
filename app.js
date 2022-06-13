@@ -18,15 +18,19 @@ app.get('/', (req, res) => {
 
 require('./app/routes/routes.js')(app);
 
-io.sockets.on('connection', (socket) => {
+io.on("connection", (socket) => {
 	console.log(`${socket.id} 소켓 연결됨`);
+	socket.emit('msg', `socket 연결 : ${socket.id}`);
 
 	socket.on('enter', async (data) => {
 		const roomData = JSON.parse(data);
 		const cuid = roomData.cuid;
 		const uid = roomData.uid;
+		const name = roomData.name
 		const rid = roomData.rid;
 		const rsa = roomData.rsa;
+
+		socket.join(`${rid}`);
 		
 		let sql = 'SELECT * FROM Room WHERE ROOM_NAME = ?';
 		let arr = [rid, uid, rsa];
@@ -39,7 +43,7 @@ io.sockets.on('connection', (socket) => {
 		[user, fields] = await db.sql_get_val(sql, arr.slice(0, 2));
 		if (user.length == 0) {
 			sql = 'INSERT INTO Participant(ROOM_NAME, UID, RSA) VALUES(?, ?, ?)';
-                        db.sql_int(sql, arr);
+                        db.sql_ins(sql, arr);
 		} else {
 			console.log(`${uid}님은 이미 ${rid}에 참가 중입니다.`);
 		}
@@ -51,12 +55,15 @@ io.sockets.on('connection', (socket) => {
 		};
 
 		socket.to(`${rid}`).emit('ENTER', JSON.stringify(enterData));
+		console.log(`${uid}님이 ${rid}방에 입장하셨습니다.`);
 	});
 
 	socket.on('leave', async (data) => {
 		const roomData = JSON.parse(data);
 		const uid = roomData.uid;
 		const rid = roomData.rid;
+
+		socket.leave(`${rid}`);
 		
 		let sql = 'DELETE FROM Participant WHERE ROOM_NAME = ? AND UID = ?';
 		let arr = [rid, uid];
@@ -77,29 +84,33 @@ io.sockets.on('connection', (socket) => {
 		}
 
 		socket.to(`${rid}`).emit('LEAVE', JSON.stringify(leaveData));
+		console.log(`${uid}님이 ${rid}에서 퇴장하셨습니다.`);
 	});
 
 	socket.on('msg', async (data) => {
 		const roomData = JSON.parse(data);
 		const uid = roomData.uid;
+		const name = roomData.name;
 		const rid = roomData.rid;
 		const msg = roomData.msg;
 		const time = new Date();
 		const IV = roomData.iv;
 		
-		const sql = 'INSERT INTO Chatting(ROOM_NAME, UID, MESSAGE, TIME, IV) VALUES(?, ?, ?, ?, ?)';
-		const arr = [rid, uid, msg, time, IV];
+		const sql = 'INSERT INTO Chatting(ROOM_NAME, UID, USER_NAME, MESSAGE, TIME, IV) VALUES(?, ?, ?, ?, ?, ?)';
+		const arr = [rid, uid, name, msg, time, IV];
 		db.sql_ins(sql, arr);
 
 		const msgData = {
 			type: 'msg',
 			sender: uid,
+			name: name,
 			content: msg,
 			time: time,
 			iv: IV
 		}
 
 		socket.to(`${rid}`).emit('update', JSON.stringify(msgData));
+		console.log(`${uid}님이 ${rid}에 메세지를 전송하셧습니다.`);
 	});
 
 	socket.on('disconnect', () => {
@@ -107,6 +118,6 @@ io.sockets.on('connection', (socket) => {
 	});
 });
 
-app.listen(3000, () => {
-	console.log('-서버 연결-');
+server.listen(3000, () => {
+        console.log('-서버 연결-');
 });

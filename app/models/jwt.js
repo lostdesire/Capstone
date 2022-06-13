@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secretKey = require('../config/config.js').PASSSWORD;
+const secretKey = require('../config/config.js').PASSWORD;
 const options = require('../config/config.js').options;
 
 const TOKEN_EXPIRED = 419;

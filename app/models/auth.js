@@ -7,10 +7,10 @@ module.exports = {
                 console.log('-signin-');
                 const {id, password, name, msg, img} = req.body;
                 let sql = 'SELECT * FROM User WHERE USER_ID = ?';
-                const [user, fields] = await db.sql_get(sql, id);
+                const [user, fields] = await db.sql_get_val(sql, id);
                 if(user.length == 0) {
                         const hashPassword = await bcrypt.hash(password, 10);
-                        sql = 'INSERT INTO USER(USER_ID, USER_PASSWORD, USER_NAME, STATUS_MSG, PROFILE_IMG) values (?, ?, ?, ?, ?)';
+                        sql = 'INSERT INTO User(USER_ID, USER_PASSWORD, USER_NAME, STATUS_MSG, PROFILE_IMG) values (?, ?, ?, ?, ?)';
                         const data = [id, hashPassword, name, msg, img];
                         await db.sql_ins(sql, data);
                         console.log(`${id} 회원가입 성공`);
