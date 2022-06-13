@@ -14,9 +14,9 @@ User.find = async (req, res) => {
 		return res.status(403).json({msg: '토큰이 없습니다.'});
 	}
 	const token = req.headers.authorization.split(' ')[1];
-
+	let user;
 	try {
-		const user = jwt.verify(token);
+		user = await jwt.verify(token);
 	} catch (err) {
 		return res.status(403).json({msg: '권한이 없습니다.'});
 	}
@@ -32,9 +32,9 @@ User.findBy = async (req, res) => {
                 return res.status(403).json({msg: '토큰이 없습니다.'});
         }
         const token = req.headers.authorization.split(' ')[1];
-
+	let user;
         try {
-                const user = jwt.verify(token);
+                user = await jwt.verify(token);
         } catch (err) {
                 return res.status(403).json({msg: '권한이 없습니다.'});
         }
@@ -51,20 +51,21 @@ User.update = async (req, res) => {
                 return res.status(403).json({msg: '토큰이 없습니다.'});
         }
         const token = req.headers.authorization.split(' ')[1];
-
+	let user;
         try {
-                const user = jwt.verify(token);
+                user = await jwt.verify(token);
         } catch (err) {
                 return res.status(403).json({msg: '권한이 없습니다.'});
         }
-	if (req.body.uid != user.id) {
+	if (req.params.uid != user.id) {
 		return res.status(401).json({msg: '해당 유저에 대한 권한이 없습니다.'});
 	}
 	let sql = 'UPDATE User SET USER_NAME = ?, STATUS_MSG = ?, PROFILE_IMG = ? WHERE USER_ID = ?';
 	const data = [req.body.name, req.body.msg, req.body.img, user.id];
-        await db.sql_ins_val(sql, data);
+        await db.sql_ins(sql, data);
 
         res.status(200).json({msg: '회원정보 수정 완료'});
+	console.log(`${user.id}님이 회원정보를 수정하셨습니다.`);
 };
 
 User.remove = async (req, res) => {
@@ -72,9 +73,9 @@ User.remove = async (req, res) => {
                 return res.status(403).json({msg: '토큰이 없습니다.'});
         }
         const token = req.headers.authorization.split(' ')[1];
-
+	let user;
         try {
-                const user = jwt.verify(token);
+                user = await jwt.verify(token);
         } catch (err) {
                 return res.status(403).json({msg: '권한이 없습니다.'});
         }
@@ -92,6 +93,7 @@ User.remove = async (req, res) => {
 	await db.sql_ins(sql, user.id);
 
         res.status(200).json({msg: '회원탈퇴 하였습니다.'});
+	console.log(`${user.id}님이 회원탈퇴 하셨습니다.`);
 };
 
 module.exports = User;

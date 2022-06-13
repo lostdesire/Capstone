@@ -26,7 +26,6 @@ io.on("connection", (socket) => {
 		const roomData = JSON.parse(data);
 		const cuid = roomData.cuid;
 		const uid = roomData.uid;
-		const name = roomData.name
 		const rid = roomData.rid;
 		const rsa = roomData.rsa;
 
@@ -54,7 +53,7 @@ io.on("connection", (socket) => {
 			rsa: rsa
 		};
 
-		socket.to(`${rid}`).emit('ENTER', JSON.stringify(enterData));
+		io.to(`${rid}`).emit('ENTER', JSON.stringify(enterData));
 		console.log(`${uid}님이 ${rid}방에 입장하셨습니다.`);
 	});
 
@@ -81,9 +80,9 @@ io.on("connection", (socket) => {
 		const leaveData = {
 			type: 'LEAVE',
 			content: `${uid}님이 퇴장하셨습니다.`
-		}
+		};
 
-		socket.to(`${rid}`).emit('LEAVE', JSON.stringify(leaveData));
+		io.to(`${rid}`).emit('LEAVE', JSON.stringify(leaveData));
 		console.log(`${uid}님이 ${rid}에서 퇴장하셨습니다.`);
 	});
 
@@ -107,10 +106,10 @@ io.on("connection", (socket) => {
 			content: msg,
 			time: time,
 			iv: IV
-		}
+		};
 
-		socket.to(`${rid}`).emit('update', JSON.stringify(msgData));
-		console.log(`${uid}님이 ${rid}에 메세지를 전송하셧습니다.`);
+		io.to(`${rid}`).emit('update', JSON.stringify(msgData));
+		console.log(`${uid}님이 ${rid}에 메세지를 전송하셨습니다.`);
 	});
 
 	socket.on('disconnect', () => {
