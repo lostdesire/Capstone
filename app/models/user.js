@@ -38,12 +38,9 @@ User.findBy = async (req, res) => {
         } catch (err) {
                 return res.status(403).json({msg: '권한이 없습니다.'});
         }
-
 	const sql = 'SELECT USER_ID, USER_NAME, STATUS_MSG, PROFILE_IMG FROM User WHERE USER_ID = ?';
         let [result, fields] = await db.sql_get_val(sql, user.id);
-
-        res.status(200).json(result);
-
+        res.status(200).json(result[0]);
 };
 
 User.update = async (req, res) => {
