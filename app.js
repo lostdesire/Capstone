@@ -45,6 +45,7 @@ io.on("connection", (socket) => {
                         db.sql_ins(sql, arr);
 		} else {
 			console.log(`${uid}님은 이미 ${rid}에 참가 중입니다.`);
+			return;
 		}
 		
 		const enterData = {
@@ -75,6 +76,7 @@ io.on("connection", (socket) => {
 			db.sql_ins(sql, arr);
 			sql = 'DELETE FROM Chatting WHERE ROOM_NAME = ?';
 			db.sql_ins(sql, rid);
+			return;
 		}
 
 		const leaveData = {
