@@ -45,6 +45,7 @@ User.findBy = async (req, res) => {
 
 User.update = async (req, res) => {
 	if (!req.headers.authorization) {
+		console.log('토큰이 없습니다.');
                 return res.status(403).json({msg: '토큰이 없습니다.'});
         }
         const token = req.headers.authorization.split(' ')[1];
@@ -52,9 +53,11 @@ User.update = async (req, res) => {
         try {
                 user = await jwt.verify(token);
         } catch (err) {
+		console.log('권한이 없습니다.');
                 return res.status(403).json({msg: '권한이 없습니다.'});
         }
 	if (req.params.uid != user.id) {
+		console.log('해당 유저에 대한 권한이 없습니다.');
 		return res.status(401).json({msg: '해당 유저에 대한 권한이 없습니다.'});
 	}
 	let sql = 'UPDATE User SET USER_NAME = ?, STATUS_MSG = ?, PROFILE_IMG = ? WHERE USER_ID = ?';

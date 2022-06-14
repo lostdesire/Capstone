@@ -11,7 +11,7 @@ module.exports = app => {
         
         app.get('/user/', user.find);
         app.get('/user/:uid', user.findBy);
-        app.post('/user/:uid', user.update);
+        app.put('/user/:uid', user.update);
         app.delete('/user/:uid', user.remove);
 	
         app.get('/room/:rid', room.find);
