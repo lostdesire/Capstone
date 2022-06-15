@@ -61,7 +61,10 @@ User.update = async (req, res) => {
 		return res.status(401).json({msg: '해당 유저에 대한 권한이 없습니다.'});
 	}
 	let sql = 'UPDATE User SET USER_NAME = ?, STATUS_MSG = ?, PROFILE_IMG = ? WHERE USER_ID = ?';
-	const data = [req.body.name, req.body.msg, req.body.img, user.id];
+	let data = [req.body.name, req.body.msg, req.body.img, user.id];
+	await db.sql_ins(sql, data);
+	sql = 'UPDATE Chatting SET USER_NAME = ? WHERE UID = ?';
+	data = [req.body.name, user.id];
         await db.sql_ins(sql, data);
 
         res.status(200).json({msg: '회원정보 수정 완료'});
