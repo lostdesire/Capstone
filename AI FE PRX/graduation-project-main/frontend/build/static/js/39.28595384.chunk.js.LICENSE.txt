@@ -1,0 +1,1 @@
+//! daily, weekly, montly, year로 다양화 필요

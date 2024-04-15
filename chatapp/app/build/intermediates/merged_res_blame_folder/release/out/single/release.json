@@ -1,0 +1,170 @@
+[
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_chat_list.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\chat_list.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_user.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_user.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_login_activity.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\login_activity.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_chat.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_chat.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_img.png.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\img.png"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_chat_2.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_chat_2.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_img_1.png.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable-v24\\img_1.png"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_logout.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_logout.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_edit_profile.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\edit_profile.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_img_2.png.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable-v24\\img_2.png"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_home.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_home.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_img.png.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable-v24\\img.png"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_chat_bubble_left.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\chat_bubble_left.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_my_text_view.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\my_text_view.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_more.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_more.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_activity_sign_up.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_my_profile.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\my_profile.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_chat_bubble_right.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\chat_bubble_right.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\menu_menu.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_user_list.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\user_list.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\navigation_nav_graph.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_launcher_background.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_chat.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\chat.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_user.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\user.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_btn_user_2.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\btn_user_2.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_activity_chat.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "G:\\chatapp\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_img_3.png.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable-v24\\img_3.png"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\drawable_img_user.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\drawable\\img_user.xml"
+    },
+    {
+        "merged": "G:\\chatapp\\app\\build\\intermediates\\merged_res\\release\\layout_my_text_view_2.xml.flat",
+        "source": "G:\\chatapp\\app\\src\\main\\res\\layout\\my_text_view_2.xml"
+    }
+]

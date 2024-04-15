@@ -1,0 +1,25 @@
+[22 19:21:07]
+	elapsed: 00h 06m 23s:  [ Complete ] 2021 4 ~ 5
+[22 19:27:30]
+	elapsed: 00h 06m 28s:  [ Complete ] 2021 5 ~ 6
+[22 19:33:58]
+	elapsed: 00h 06m 36s:  [ Complete ] 2021 6 ~ 7
+[22 19:40:35]
+	elapsed: 00h 06m 56s:  [ Complete ] 2021 7 ~ 8
+[22 19:47:31]
+	elapsed: 00h 06m 41s:  [ Complete ] 2021 8 ~ 9
+[22 19:54:13]
+	elapsed: 00h 06m 29s:  [ Complete ] 2021 9 ~ 10
+[22 20:00:43]
+	elapsed: 00h 06m 33s:  [ Complete ] 2021 10 ~ 11
+[22 20:07:16]
+	elapsed: 00h 06m 25s:  [ Complete ] 2021 11 ~ 12
+[22 20:13:41]
+	elapsed: 00h 06m 57s:  [ Complete ] 2022 1 ~ 2
+[22 20:20:39]
+	elapsed: 00h 06m 02s:  [ Complete ] 2022 2 ~ 3
+[22 20:26:41]
+[22 20:34:25]
+	elapsed: 00h 07m 11s:  [ Complete ] 2022 3 ~ 4
+[22 20:41:37]
+	elapsed: 00h 06m 30s:  [ Complete ] 2022 4 ~ 5

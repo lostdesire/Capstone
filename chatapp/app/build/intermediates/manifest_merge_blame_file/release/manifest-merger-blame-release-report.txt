@@ -1,0 +1,104 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="chatapp.ce2022"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->G:\chatapp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->G:\chatapp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->G:\chatapp\app\src\main\AndroidManifest.xml:5:5-66
+11-->G:\chatapp\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->G:\chatapp\app\src\main\AndroidManifest.xml:6:5-78
+12-->G:\chatapp\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->G:\chatapp\app\src\main\AndroidManifest.xml:7:5-79
+13-->G:\chatapp\app\src\main\AndroidManifest.xml:7:22-77
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->G:\chatapp\app\src\main\AndroidManifest.xml:8:5-80
+14-->G:\chatapp\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->G:\chatapp\app\src\main\AndroidManifest.xml:9:5-78
+15-->G:\chatapp\app\src\main\AndroidManifest.xml:9:22-76
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->G:\chatapp\app\src\main\AndroidManifest.xml:10:5-80
+16-->G:\chatapp\app\src\main\AndroidManifest.xml:10:22-78
+17
+18    <application
+18-->G:\chatapp\app\src\main\AndroidManifest.xml:13:5-47:19
+19        android:allowBackup="true"
+19-->G:\chatapp\app\src\main\AndroidManifest.xml:15:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.5.0] C:\Users\User\.gradle\caches\transforms-3\aa42d6511391bf20cfbff676cbf7b46a\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+21        android:extractNativeLibs="false"
+22        android:icon="@mipmap/ic_launcher"
+22-->G:\chatapp\app\src\main\AndroidManifest.xml:16:9-43
+23        android:label="짤톡"
+23-->G:\chatapp\app\src\main\AndroidManifest.xml:17:9-27
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->G:\chatapp\app\src\main\AndroidManifest.xml:18:9-54
+25        android:supportsRtl="true"
+25-->G:\chatapp\app\src\main\AndroidManifest.xml:19:9-35
+26        android:theme="@style/Theme.Chat"
+26-->G:\chatapp\app\src\main\AndroidManifest.xml:20:9-42
+27        android:usesCleartextTraffic="true" >
+27-->G:\chatapp\app\src\main\AndroidManifest.xml:14:9-44
+28        <activity
+28-->G:\chatapp\app\src\main\AndroidManifest.xml:21:9-23:40
+29            android:name="chatapp.ce2022.EditProfile_Activity"
+29-->G:\chatapp\app\src\main\AndroidManifest.xml:22:13-49
+30            android:exported="false" />
+30-->G:\chatapp\app\src\main\AndroidManifest.xml:23:13-37
+31        <activity
+31-->G:\chatapp\app\src\main\AndroidManifest.xml:24:9-28:61
+32            android:name="chatapp.ce2022.SignUp_Activity"
+32-->G:\chatapp\app\src\main\AndroidManifest.xml:25:13-44
+33            android:exported="false"
+33-->G:\chatapp\app\src\main\AndroidManifest.xml:26:13-37
+34            android:label="@string/title_activity_sign_up"
+34-->G:\chatapp\app\src\main\AndroidManifest.xml:27:13-59
+35            android:theme="@style/Theme.Chat.NoActionBar" />
+35-->G:\chatapp\app\src\main\AndroidManifest.xml:28:13-58
+36        <activity
+36-->G:\chatapp\app\src\main\AndroidManifest.xml:29:9-31:40
+37            android:name="chatapp.ce2022.User_List"
+37-->G:\chatapp\app\src\main\AndroidManifest.xml:30:13-38
+38            android:exported="false" />
+38-->G:\chatapp\app\src\main\AndroidManifest.xml:31:13-37
+39        <activity
+39-->G:\chatapp\app\src\main\AndroidManifest.xml:32:9-34:40
+40            android:name="chatapp.ce2022.Chat_List"
+40-->G:\chatapp\app\src\main\AndroidManifest.xml:33:13-38
+41            android:exported="false" />
+41-->G:\chatapp\app\src\main\AndroidManifest.xml:34:13-37
+42        <activity
+42-->G:\chatapp\app\src\main\AndroidManifest.xml:35:9-37:40
+43            android:name="chatapp.ce2022.Chat_Activity"
+43-->G:\chatapp\app\src\main\AndroidManifest.xml:36:13-42
+44            android:exported="false" />
+44-->G:\chatapp\app\src\main\AndroidManifest.xml:37:13-37
+45        <activity
+45-->G:\chatapp\app\src\main\AndroidManifest.xml:38:9-46:20
+46            android:name="chatapp.ce2022.Login_Activity"
+46-->G:\chatapp\app\src\main\AndroidManifest.xml:39:13-43
+47            android:exported="true" >
+47-->G:\chatapp\app\src\main\AndroidManifest.xml:40:13-36
+48            <intent-filter>
+48-->G:\chatapp\app\src\main\AndroidManifest.xml:41:13-45:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->G:\chatapp\app\src\main\AndroidManifest.xml:42:17-69
+49-->G:\chatapp\app\src\main\AndroidManifest.xml:42:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->G:\chatapp\app\src\main\AndroidManifest.xml:44:17-77
+51-->G:\chatapp\app\src\main\AndroidManifest.xml:44:27-74
+52            </intent-filter>
+53        </activity>
+54    </application>
+55
+56</manifest>

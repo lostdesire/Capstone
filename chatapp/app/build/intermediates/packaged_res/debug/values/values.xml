@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="color_main">#689def</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="app_name">Chat</string>
+    <string name="default_web_client_id" translatable="false">654283457210-go78r4gadfri4dao5t4ea4b19mb49j8e.apps.googleusercontent.com</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">654283457210</string>
+    <string name="google_api_key" translatable="false">AIzaSyACdh6aAxLcSZxXf8pIpb76JmgcdLG5JF0</string>
+    <string name="google_app_id" translatable="false">1:654283457210:android:ebe413e542524a3f00b883</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyACdh6aAxLcSZxXf8pIpb76JmgcdLG5JF0</string>
+    <string name="google_storage_bucket" translatable="false">chatapp-87090.appspot.com</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">chatapp-87090</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="title_activity_sign_up">SignUp_Activity</string>
+    <style name="Theme.Chat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.Chat.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.Chat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Chat.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

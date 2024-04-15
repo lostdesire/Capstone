@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home"
+        android:title="프로필 수정"
+        android:icon="@drawable/btn_home" />
+    <item android:id="@+id/menu_chat"
+        android:title="로그아웃"
+        android:icon="@drawable/btn_chat" />
+
+
+</menu>
+
